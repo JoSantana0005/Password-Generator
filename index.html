@@ -30,42 +30,48 @@
                             <label for="Length--password">Character Length</label>
                             <span id="Number--range">X</span>
                         </div>
-                        <input type="range" id="Length--password">
+                        <input type="range" id="Length--password" max="10">
                     </div>
                     
                     <!--Checkbox para las especificaciones de la contraseña-->
                     <div class="Input--Container">
-                        <input type="checkbox" id="Uppercase">
-                        <label>Include Uppercase Letters</label>
-                    </div>
-                    
-                    <div class="Input--Container">
-                        <input type="checkbox" id="LowerCase">
-                        <label>Include Lowercase Letters</label>
-                    </div>
-                    
-                    <div class="Input--Container">
-                        <input type="checkbox" id="Numbers">
-                        <label>Include Numbers</label>
-                    </div>
-                    
-                    <div class="Input--Container">
-                        <input type="checkbox" id="Symbols">
-                        <label>Include Symbols</label>
-                    </div>
+                        
+                        <div>
+                            <input type="checkbox" id="Uppercase">
+                            <label>Include Uppercase Letters</label>
+                        </div>
 
-                    <!--Barras de la fuerza de la contraseña-->
-                    <div class="Stregth--password">
-                        <h4>Stregth</h4>
-                        <div class="Barra"></div>
-                        <div class="Barra"></div>
-                        <div class="Barra"></div>
-                        <div class="Barra"></div>
-                    </div>
+                        <div>
+                            <input type="checkbox" id="LowerCase">
+                            <label>Include Lowercase Letters</label>
+                        </div>
 
+                        <div>
+                            <input type="checkbox" id="Numbers">
+                            <label>Include Numbers</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="Symbols">
+                            <label>Include Symbols</label>
+                        </div>
+
+                        <!--Barras de la fuerza de la contraseña-->
+                        <div class="Stregth--password">
+                            <h4>Stregth</h4>
+                            <span>X</span>
+                            <div class="Barras">
+                                <div class="Barra"></div>
+                                <div class="Barra"></div>
+                                <div class="Barra"></div>
+                                <div class="Barra"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
                     <div class="Button">
                         <button>Generate</button>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
                     </div>
                 </form>
             </section>

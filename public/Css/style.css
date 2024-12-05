@@ -4,6 +4,7 @@
     --SecondaryColor: #16171c;
     --HoverColor: #b8babf;
     --terciryColor: #efdd00 ;
+    --CuartaneryColo: #56554b ;
 }
 *{
     margin: 0%;
@@ -17,7 +18,6 @@ body{
 }
 main{
     width: 75%;
-    border: 1px solid #000;
     height: 400px;
     margin: auto;
     padding: 10px;
@@ -26,16 +26,15 @@ main{
     margin-top: 80px;
 }
 main .content--page{
-    border: 1px solid #000;
     width: 45%;
     padding: 5px;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     gap: 5px;
+    box-shadow: 0 0 15px var(--SecondaryColor);
 }
 .content--page .Content--top{
-    border: 1px solid #000;
     width: 100%;
     display: flex;
     flex-flow: column wrap;
@@ -47,9 +46,9 @@ main .content--page{
     font-size: 1.2em;
     font-weight: 500;
     letter-spacing: 1px;
+    color: #fff;
 }
 .content--page .Content--top div{
-    border: 1px solid #000;
     width: 75%;
     padding: 5px;
     display: flex;
@@ -79,7 +78,6 @@ main .content--page{
     padding: 3px;
 }
 .content--page .opc--password{
-    border: 1px solid #000;
     width: 100%;
     max-height: 280px;
     height: 280px;
@@ -90,27 +88,34 @@ main .content--page{
 }
 .content--page .opc--password form{
     border: 1px solid #000;
-    width: 80%;
+    width: 75%;
     height: 265px;
     display: flex;
     flex-flow: column wrap;
+    color: #eee;
+    font-weight: 500;
+    
+    background-color: var(--SecondaryColor);
     gap: 5px;
 }
-.content--page .opc--password form .Input--Container:nth-child(1){
-    border: 1px solid #000;
-    text-align: center;
+.content--page .opc--password form .Input--Container{
     display: flex;
     flex-flow: column wrap;
     gap: 2px;
+}
+.content--page .opc--password form .Input--Container:nth-child(1){
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
     padding: 4px;
 }
-.content--page .opc--password form .Input--Container div{
+.content--page .opc--password form .Input--Container:nth-child(1) div{
     display: flex;
     justify-content: space-between;
     padding-right: 12px;
 }
 .content--page .opc--password form .Input--Container div label{
-    font-size: 1.2em;
+    font-size: 1em;
     letter-spacing: 1px;
     font-weight: 400;
 }
@@ -119,3 +124,84 @@ main .content--page{
     color: var(--terciryColor);
     font-weight: 500;
 }
+.content--page .opc--password form .Input--Container:nth-child(1) input{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 2px 3px;
+    margin: auto;
+    opacity: 0.7;
+    background-color: var(--FontColor);
+    height: 25px;
+    border-radius: 50px;
+}
+.content--page .opc--password form .Input--Container:nth-child(1) input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: var(--SecondaryColor);
+    border-radius: 100%;
+    cursor: pointer;
+}
+.content--page .opc--password .Input--Container div{
+    padding: 2px 9px;
+    margin: 2px;
+}
+.content--page .opc--password .Input--Container .Stregth--password{
+    border: 1px solid var(--SecondaryColor);
+    width: 95%;
+    height: 35px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--CuartaneryColo);
+    padding: 3px;
+    gap: 10px;
+}
+.content--page .opc--password .Input--Container .Stregth--password h4{
+    font-size: 1em;
+    color: #ccc;
+    letter-spacing: 1px;
+}
+.content--page .opc--password .Input--Container .Stregth--password span{
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+.content--page .opc--password .Input--Container .Stregth--password .Barras{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 2px;
+}
+.content--page .opc--password .Input--Container .Stregth--password .Barra{
+    border: 1px solid #000;
+    height: 100%;
+    padding: 7px;
+}
+.content--page .opc--password .Button{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+.content--page .opc--password .Button button{
+    width: 100%;
+    padding: 4px 2px;
+    font-size: 1.1em;
+    background-color: var(--PrimaryColor);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .1s linear;
+}
+.content--page .opc--password .Button button:hover{
+    background-color: var(--terciryColor);
+    color: var(--SecondaryColor);
+
+}
+
