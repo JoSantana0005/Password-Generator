@@ -9,6 +9,67 @@
     <link rel="Icon" href="public/Imagen/LogoApp.svg" type="Imagen/svg">
 </head>
 <body>
-    
+    <main>
+        <div class="content--page">
+            
+            <section class="Content--top">
+                
+                <h1>Password Generator</h1>
+                
+                <div class="Result--generator">
+                    <h3 id="Result"></h3>
+                    <img src="public/Imagen/Copy.svg" alt="Logo">
+                </div>
+            </section>
+            
+            <section class="opc--password">
+                <form>
+                    <!--Rango de la contraseña-->
+                    <div class="Input--Container">
+                        <div>
+                            <label for="Length--password">Character Length</label>
+                            <span id="Number--range">X</span>
+                        </div>
+                        <input type="range" id="Length--password">
+                    </div>
+                    
+                    <!--Checkbox para las especificaciones de la contraseña-->
+                    <div class="Input--Container">
+                        <input type="checkbox" id="Uppercase">
+                        <label>Include Uppercase Letters</label>
+                    </div>
+                    
+                    <div class="Input--Container">
+                        <input type="checkbox" id="LowerCase">
+                        <label>Include Lowercase Letters</label>
+                    </div>
+                    
+                    <div class="Input--Container">
+                        <input type="checkbox" id="Numbers">
+                        <label>Include Numbers</label>
+                    </div>
+                    
+                    <div class="Input--Container">
+                        <input type="checkbox" id="Symbols">
+                        <label>Include Symbols</label>
+                    </div>
+
+                    <!--Barras de la fuerza de la contraseña-->
+                    <div class="Stregth--password">
+                        <h4>Stregth</h4>
+                        <div class="Barra"></div>
+                        <div class="Barra"></div>
+                        <div class="Barra"></div>
+                        <div class="Barra"></div>
+                    </div>
+
+                    <div class="Button">
+                        <button>Generate</button>
+                        <img src="public/Imagen/Flecha.svg" alt="Logo">
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
 </body>
 </html>
