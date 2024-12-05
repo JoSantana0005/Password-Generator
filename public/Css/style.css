@@ -1,0 +1,16 @@
+:root{
+    --PrimaryColor: #323c4f;
+    --FontColor: #e2e5fc;
+    --SecondaryColor: #16171c;
+    --HoverColor: #b8babf;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+body{
+    background-color: var(--PrimaryColor);
+    font-family: "RobotoCondensed";
+}
