@@ -3,6 +3,7 @@
     --FontColor: #e2e5fc;
     --SecondaryColor: #16171c;
     --HoverColor: #b8babf;
+    --terciryColor: #efdd00 ;
 }
 *{
     margin: 0%;
@@ -13,4 +14,67 @@
 body{
     background-color: var(--PrimaryColor);
     font-family: "RobotoCondensed";
+}
+main{
+    width: 75%;
+    border: 1px solid #000;
+    height: 400px;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+main .content--page{
+    border: 1px solid #000;
+    width: 45%;
+    padding: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 5px;
+}
+.content--page .Content--top{
+    border: 1px solid #000;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+}
+.content--page .Content--top h1{
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.content--page .Content--top div{
+    border: 1px solid #000;
+    width: 75%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    background-color: var(--SecondaryColor);
+}
+.content--page .Content--top div h3{
+    font-size: 1.3em;
+    text-align: justify;
+    letter-spacing: 1.2em;
+    color: #fff;
+    cursor: pointer;
+    transition: .1s linear;
+}
+.content--page .Content--top div h3:hover{
+    text-decoration: underline var(--terciryColor);
+    text-shadow: 0 0 5px var(--PrimaryColor);
+}
+.content--page .Content--top div svg{
+    transition: .1s linear;
+    cursor: pointer;
+}
+.content--page .Content--top div svg:hover{
+    fill: var(--terciryColor);
+    padding: 3px;
 }
