@@ -78,3 +78,44 @@ main .content--page{
     fill: var(--terciryColor);
     padding: 3px;
 }
+.content--page .opc--password{
+    border: 1px solid #000;
+    width: 100%;
+    max-height: 280px;
+    height: 280px;
+    padding: 3px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.content--page .opc--password form{
+    border: 1px solid #000;
+    width: 80%;
+    height: 265px;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 5px;
+}
+.content--page .opc--password form .Input--Container:nth-child(1){
+    border: 1px solid #000;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2px;
+    padding: 4px;
+}
+.content--page .opc--password form .Input--Container div{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 12px;
+}
+.content--page .opc--password form .Input--Container div label{
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+.content--page .opc--password form .Input--Container div span{
+    font-size: 1.2em;
+    color: var(--terciryColor);
+    font-weight: 500;
+}
