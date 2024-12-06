@@ -58,9 +58,8 @@ main .content--page{
     background-color: var(--SecondaryColor);
 }
 .content--page .Content--top div h3{
-    font-size: 1.3em;
+    font-size: 0.9;
     text-align: justify;
-    letter-spacing: 1.2em;
     color: #fff;
     cursor: pointer;
     transition: .1s linear;

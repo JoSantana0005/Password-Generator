@@ -17,7 +17,7 @@
                 <h1>Password Generator</h1>
                 
                 <div class="Result--generator">
-                    <h3 id="Result">X</h3>
+                    <h3 id="Result"></h3>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"/></svg>
                 </div>
             </section>
@@ -30,7 +30,7 @@
                             <label for="Length--password">Character Length</label>
                             <span id="Number--range">X</span>
                         </div>
-                        <input type="range" id="Length--password" max="10">
+                        <input type="range" id="Length--password" value="0" max="12">
                     </div>
                     
                     <!--Checkbox para las especificaciones de la contraseña-->
@@ -59,11 +59,11 @@
                         <!--Barras de la fuerza de la contraseña-->
                         <div class="Stregth--password">
                             <h4>Stregth</h4>
-                            <span>X</span>
+                            <span id="Level">X</span>
                             <div class="Barras">
-                                <div class="Barra"></div>
-                                <div class="Barra"></div>
-                                <div class="Barra"></div>
+                                <div class="Barra Barra_debil Barra_mediana"></div>
+                                <div class="Barra Barra_mediana"></div>
+                                <div class="Barra Barra_mediana"></div>
                                 <div class="Barra"></div>
                             </div>
                         </div>
@@ -71,11 +71,12 @@
                     </div>
                     
                     <div class="Button">
-                        <button>Generate</button>
+                        <button id="Generate">Generate</button>
                     </div>
                 </form>
             </section>
         </div>
     </main>
 </body>
+<script src="public/Js/app.js"></script>
 </html>
