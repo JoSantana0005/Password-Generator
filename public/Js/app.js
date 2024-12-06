@@ -70,36 +70,49 @@ function Stregth_password(password){
 }
 let Level = document.getElementById('Level');
 //Function que activa las barras
-function waves(level){
+function wavesColors(level){
+    let waves = document.querySelectorAll('.Barra, .Barra_debil, .Barra_mediana');
+    waves.forEach(element =>{
+        element.style.backgroundColor = 'Transparent'
+    })
+    
     if(level == 'Weak'){
         Level.textContent = level
-        let wave_red = document.getElementsByClassName('Barra_debil')[0];
-        wave_red.style.backgroundColor = "#f00";
+        let wave_red = document.getElementsByClassName('Barra_debil');
+        Array.from(wave_red).forEach(element =>{
+            element.style.backgroundColor = '#eb1a1a'
+        })
     }
+    
     else if(level == 'Medium'){
         Level.textContent = level
         let wave_orange = document.querySelectorAll('.Barra_mediana');
         Array.from(wave_orange).forEach(element =>{
-            element.style.backgroundColor = "#b24e00"
+            element.style.backgroundColor = '#b24e00'
         });
     }
+    
     else if(level == "Safe"){
         Level.textContent = level
         let wave_green = document.querySelectorAll('.Barra');
         Array.from(wave_green).forEach(element =>{
-            element.style.backgroundColor = "#0f0"
+            element.style.backgroundColor = '#29e200'
         });
         
     }
 }
 // String para las contraseñas
-
+let result = document.getElementById('Result');
 document.getElementById('Generate').addEventListener('click',(event)=>{
     event.preventDefault();
     let Length = document.getElementById('Length--password').value;
     let characters = StringCharacter();
 
-    let result = document.getElementById('Result');
+    if(Length == 0 || (!UpperCase.checked && !lowerCase.checked && !Numbers.checked && !Symbols.checked)){
+        alert("Please select password options and assign a password size")
+        return
+    }
+
     if(result){
         password = GeneratePassword(characters,Length);
         result.textContent = password
@@ -107,6 +120,20 @@ document.getElementById('Generate').addEventListener('click',(event)=>{
     }else{
         console.log("Algo salio mal")
     }
+    
     let Stregth = Stregth_password(password);
-    waves(Stregth);
+    wavesColors(Stregth);
+})
+
+//Evento para copiar la contraseña en el teclado
+document.getElementById('Copy').addEventListener('click',()=>{
+    if(result){
+        navigator.clipboard.writeText(result.textContent).then(function(){
+            alert("The copied password is" + result.textContent)
+        },function(err){
+            console.error('Error' + err)
+        })
+    }else{
+        console.log("No existen result")
+    }
 })
